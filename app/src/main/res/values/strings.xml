@@ -6,4 +6,11 @@
     <string name="remember_me">Remember me</string>
     <string name="subscribe">Subscribe</string>
     <string name="sign_in">sign in</string>
+    <string name="add_info">Add information about yourself:</string>
+    <string name="user_name">User name</string>
+    <string name="password_task2">Password</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone number</string>
+    <string name="age">Age</string>
 </resources>
