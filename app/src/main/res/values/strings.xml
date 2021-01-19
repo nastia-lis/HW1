@@ -1,18 +1,5 @@
 <resources>
-    <string name="app_name">HW1</string>
-    <string name="authorization">Authorization</string>
-    <string name="login">Login</string>
-    <string name="password">Password</string>
-    <string name="remember_me">Remember me</string>
-    <string name="subscribe">Subscribe</string>
-    <string name="sign_in">sign in</string>
-    <string name="add_info">Add information about yourself:</string>
-    <string name="user_name">User name</string>
-    <string name="password_task2">Password</string>
-    <string name="name">Name</string>
-    <string name="email">Email</string>
-    <string name="phone_number">Phone number</string>
-    <string name="age">Age</string>
+    <string name="app_name">Calculator</string>
     <string name="ac" translatable="false">AC</string>
     <string name="sign" translatable="false">+/-</string>
     <string name="percent" translatable="false">%</string>
@@ -30,6 +17,6 @@
     <string name="_3" translatable="false">3</string>
     <string name="plus" translatable="false">+</string>
     <string name="_0" translatable="false">0</string>
-    <string name="comma" translatable="false">,</string>
+    <string name="comma" translatable="false">.</string>
     <string name="equal" translatable="false">=</string>
 </resources>

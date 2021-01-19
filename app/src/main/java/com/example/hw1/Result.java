@@ -1,11 +1,6 @@
 package com.example.hw1;
 
 public class Result {
-/*
-    private String number1;
-    private String number2;
-    private int flag;*/
-
     private String bottom0;
     private String bottom1;
     private String bottom2;
@@ -69,27 +64,4 @@ public class Result {
     public String getBottom9() {
         return bottom9;
     }
-
-//    private void ClickNumb(String number) {
-//        if (flag == 0) {
-//            number1 = number1 + number;
-//            showNumb(number1);
-//        } else {
-//            number2 = number2 + number;
-//            showNumb(number2);
-//        }
-//    }
-//
-//    private void showNumb(String number) {
-//        if (number.length() != 0) {
-//            textResult.setText(number);
-//        }
-//    }
-//
-//    private void clear() {
-//        number1 = "";
-//        number2 = "";
-//        flag = 0;
-//    }
-
 }

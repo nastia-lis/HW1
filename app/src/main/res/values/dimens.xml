@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="padding_all">15dp</dimen>
-    <dimen name="padding_top_auth">100dp</dimen>
-    <dimen name="text_size_big">40sp</dimen>
-    <dimen name="padding_top_login">50dp</dimen>
-    <dimen name="padding_top">15dp</dimen>
-    <dimen name="text_size_over">20sp</dimen>
     <dimen name="width_button">0dp</dimen>
+    <dimen name="text_size_big">40sp</dimen>
     <dimen name="result_text_size">80sp</dimen>
 </resources>

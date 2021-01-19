@@ -1,5 +1,6 @@
 package com.example.hw1;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -8,16 +9,19 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+import java.io.Serializable;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, Serializable {
 
     private TextView textResult;
     private Result result;
-
     private String number1;
     private String number2;
-
     private int flag;
     private double answer;
+    private final static String KEY_RESULT_1 = "Result 1";
+    private final static String KEY_RESULT_2 = "Result 2";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         result = new Result();
 
         initView();
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        if(number2.equals("")) {
+            outState.putSerializable(KEY_RESULT_1, number1);
+        } else {
+            outState.putSerializable(KEY_RESULT_2, number2);
+        }
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        if(number2.equals("")) {
+            number1 = (String) savedInstanceState.getSerializable(KEY_RESULT_1);
+            setTextResult(number1);
+        } else {
+            number2 = (String) savedInstanceState.getSerializable(KEY_RESULT_2);
+            setTextResult(number2);
+        }
     }
 
     @Override
@@ -66,20 +92,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 textResult.setText("");
                 break;
             case R.id.button_degree:
-                if (flag == 0) flag = 4;
+                flag = 4;
                 break;
             case R.id.button_multi:
-                if (flag == 0) flag = 3;
+                flag = 3;
                 break;
             case R.id.button_minus:
-                if (flag == 0) flag = 2;
+                flag = 2;
                 break;
             case R.id.button_plus:
-                if (flag == 0) flag = 1;
+                flag = 1;
                 break;
             case R.id.button_equal:
-                calculator();
-                break;
+                try {
+                    calculator();
+                    break;
+                } catch (NumberFormatException e) {
+                    Toast.makeText(this, "Введите второе число!", Toast.LENGTH_LONG).show();
+                }
             case R.id.button_comma:
                 comma();
                 break;
@@ -228,19 +258,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case 1:
                 answer = numb1 + numb2;
                 setTextResult(Double.toString(answer));
+                number1 = Double.toString(answer);
+                number2 = "";
                 break;
             case 2:
                 answer = numb1 - numb2;
                 setTextResult(Double.toString(answer));
+                number1 = Double.toString(answer);
+                number2 = "";
                 break;
             case 3:
                 answer = numb1 * numb2;
                 setTextResult(Double.toString(answer));
+                number1 = Double.toString(answer);
+                number2 = "";
                 break;
             case 4:
                 try {
                     answer = numb1 / numb2;
                     setTextResult(Double.toString(answer));
+                    number1 = Double.toString(answer);
+                    number2 = "";
+                    break;
                 } catch (ArithmeticException e) {
                     Toast.makeText(this, "Нельзя делить на ноль!", Toast.LENGTH_LONG).show();
                 }
@@ -249,16 +288,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void comma() {
         if (flag == 0) {
-            if (number1.length() != 0 && number1.indexOf(".") < 0) {
-                setTextResult(".");
+            if (number1.length() != 0) {
+                clickNumber(".");
             } else {
-                setTextResult("0.");
+                clickNumber("0.");
             }
         } else {
-            if (number2.length() != 0 && number2.indexOf(".") < 0) {
-                setTextResult(".");
+            if (number2.length() != 0) {
+                clickNumber(".");
             } else {
-                setTextResult("0.");
+                clickNumber("0.");
             }
         }
     }
