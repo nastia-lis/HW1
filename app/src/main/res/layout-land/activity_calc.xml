@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/calc">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_all">
+
+        <TextView
+            android:id="@+id/text_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:ems="8"
+            android:textColor="@color/button_color"
+            android:textSize="@dimen/result_text_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_ac"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/ac" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_7"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_7" />
+
+                <Button
+                    android:id="@+id/button_8"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_8" />
+
+                <Button
+                    android:id="@+id/button_9"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_9" />
+
+                <Button
+                    android:id="@+id/button_degree"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/degree" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_4"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_4" />
+
+                <Button
+                    android:id="@+id/button_5"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_5" />
+
+                <Button
+                    android:id="@+id/button_6"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_6" />
+
+                <Button
+                    android:id="@+id/button_multi"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/multi" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_1"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_1" />
+
+                <Button
+                    android:id="@+id/button_2"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_2" />
+
+                <Button
+                    android:id="@+id/button_3"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_3" />
+
+                <Button
+                    android:id="@+id/button_minus"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/minus" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_comma"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/comma" />
+
+                <Button
+                    android:id="@+id/button_0"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_0" />
+
+                <Button
+                    android:id="@+id/button_equal"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/equal" />
+
+                <Button
+                    android:id="@+id/button_plus"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/plus" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

@@ -7,4 +7,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="MyStyle" parent="AppTheme">
+        <item name="backgroundTint">@color/button_color</item>
+        <item name="android:textSize">@dimen/text_size_big</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
 </resources>
